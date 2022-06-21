@@ -10,7 +10,8 @@
 
     .typing-demo {
         width: 22ch;
-        animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+        animation: typing 2s steps(22), typing-reverse 2s steps(22), blink .5s step-end infinite alternate;
+        animation-delay: 0s, 3s;
         white-space: nowrap;
         overflow: hidden;
         border-right: 3px solid;
@@ -20,7 +21,17 @@
 
     @keyframes typing {
         from {
-        width: 0
+            width: 0;
+        }
+       
+    }
+
+    @keyframes typing-reverse {
+        
+        to {
+            
+            width: 0;
+            
         }
     }
 
@@ -29,10 +40,12 @@
             border-color: transparent;
         }
     }
+
+    
 </style>
 
 <div class="wrapper">
     <div class="typing-demo">
-        This is a typin demo
+        This is a typing demo
     </div>
 </div>
